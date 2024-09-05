@@ -7,7 +7,9 @@ import UserTable from './components/UserTable';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
-  const { users, loading, error } = useSelector((state: RootState) => state.users);
+  const { users, loading, error } = useSelector(
+    (state: RootState) => state.users
+  );
 
   useEffect(() => {
     dispatch(getUsers());
@@ -20,9 +22,7 @@ const App: React.FC = () => {
       {loading && <div className="loading">Loading...</div>}
       {error && <div className="error">Error: {error}</div>}
 
-      {users.length > 0 && (
-        !loading && !error && (<UserTable users={users} />)
-      )}
+      {users.length > 0 && !loading && !error && <UserTable users={users} />}
     </div>
   );
 };

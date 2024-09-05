@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../store/store';
+import { RootState } from '../store';
 
 const UserTable: React.FC = () => {
     const [search, setSearch] = useState({ name: '', username: '', email: '', phone: '' });
@@ -18,6 +18,7 @@ const UserTable: React.FC = () => {
 
     return (
         <>
+            <pre>{JSON.stringify(users)}</pre>
             <div>
                 <input name="name" placeholder="Search by name" onChange={handleInputChange} />
                 <input name="username" placeholder="Search by username" onChange={handleInputChange} />

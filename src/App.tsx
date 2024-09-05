@@ -1,9 +1,11 @@
+import UserTable from "./components/UserTable"
+
 function App() {
 
 
   return (
     <>
-      main file
+      <UserTable />
     </>
   )
 }

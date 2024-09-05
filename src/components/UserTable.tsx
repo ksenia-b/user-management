@@ -18,8 +18,7 @@ const UserTable: React.FC = () => {
 
     return (
         <>
-            <pre>{JSON.stringify(users)}</pre>
-            <div>
+            <div className="filter-inputs">
                 <input name="name" placeholder="Search by name" onChange={handleInputChange} />
                 <input name="username" placeholder="Search by username" onChange={handleInputChange} />
                 <input name="email" placeholder="Search by email" onChange={handleInputChange} />

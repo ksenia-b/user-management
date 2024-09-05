@@ -17,11 +17,11 @@ const App: React.FC = () => {
     <div className="App">
       <h1>User Management Table</h1>
 
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
+      {loading && <div className="loading">Loading...</div>}
+      {error && <div className="error">Error: {error}</div>}
 
       {users.length > 0 && (
-        <UserTable users={users} />
+        !loading && !error && (<UserTable users={users} />)
       )}
     </div>
   );
